@@ -10,7 +10,8 @@
 .humanizer-container {
   max-width: 1200px;
   margin: 2rem auto;
-  padding: 2rem;
+  margin-top: 110px;
+  padding: 3rem;
   background: white;
   border-radius: 1.5rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
@@ -31,6 +32,15 @@
   align-items: center;
   justify-content: center;
   gap: 0.75rem;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  height: 70px;
+  /* Fixed header height */
 }
 
 .header-icon {
@@ -182,7 +192,9 @@
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .error-message {
@@ -280,24 +292,55 @@
 
 @media (max-width: 768px) {
   .humanizer-container {
-    margin: 1rem;
-    padding: 1rem;
+    margin-top: 110px;
+    padding: 3rem;
   }
-  
+
+  .text-input-wrapper {
+    margin-top: 1.5rem;
+  }
+
+  .floating-label {
+    top: -0.5rem !important;
+    left: 1rem !important;
+  }
+
+  .header-nav ul {
+    top: 70px;
+    /* Start menu below header */
+    height: calc(100vh - 70px);
+    /* Account for header height */
+  }
+
+  .hamburger {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    z-index: 2000;
+  }
+
   .level-selector {
     grid-template-columns: 1fr;
   }
-  
+
   .about-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .text-input {
     height: 150px;
+    padding-top: 2rem !important;
   }
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
 }

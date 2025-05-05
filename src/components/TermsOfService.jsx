@@ -21,7 +21,7 @@ const TermsOfService = () => {
             >
                 <div className="terms-header">
                     <h1>Terms of Service</h1>
-                    <p className="effective-date">Effective: January 1, 2024</p>
+                    <p className="effective-date">Effective: May 5, 2025</p>
                 </div>
 
                 <div className="terms-content">
