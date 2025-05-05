@@ -1,12 +1,73 @@
-# React + Vite
+# AI Text Humanizer 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Transform AI-generated text into natural, human-like content with advanced NLP techniques.
 
-Currently, two official plugins are available:
+## Features ✨
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Natural Language Conversion**: Make AI text sound authentically human
+- **Context Preservation**: Maintain original meaning while enhancing readability
+- **Customization Levels**: Choose from light, medium, or heavy humanization
+- **Real-time Processing**: Instant text transformation
+- **Privacy First**: No data storage or tracking
 
-## Expanding the ESLint configuration
+## Technologies Used 🛠️
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend**: React.js, Framer Motion, CSS Modules
+- **NLP**: Transformers.js, Hugging Face Models
+- **Deployment**: GitHub Pages, Vite
+- **Utilities**: React Icons, React Router
+
+## Installation ⚙️
+
+1. Clone the repository:
+```bash
+git clone https://github.com/YOUR-USERNAME/ai-text-humanizer.git 
+```
+2. Install dependencies:
+
+```
+cd ai-text-humanizer
+npm install
+```
+
+3. Start development server:
+
+```
+npm run dev
+```
+
+## Usage 📝
+1. Paste AI-generated text into the input box
+
+2. Select desired humanization level
+
+3. Click "Humanize Text"
+
+4. Copy/Paste the natural-sounding output
+
+5. (Optional) Provide feedback to improve results
+
+## Deployment 🚀
+Deploy to GitHub Pages:
+```
+npm install gh-pages --save-dev
+npm run deploy
+```
+
+## Contributing 🤝
+1. Fork the repository
+
+2. Create your feature branch:
+
+```
+git checkout -b feature/amazing-feature
+```
+3. Commit changes:
+```
+git commit -m 'Add amazing feature'
+```
+4. Push to branch:
+```
+git push origin feature/amazing-feature
+```
+5. Open a Pull Request
