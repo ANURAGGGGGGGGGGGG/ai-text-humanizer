@@ -1,0 +1,172 @@
+/* About.css */
+.about-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+  }
+  
+  .about-hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    margin-bottom: 3rem;
+    background: linear-gradient(135deg, #f0f4ff, #ffffff);
+    border-radius: 2rem;
+  }
+  
+  .about-hero h1 {
+    font-size: 2.5rem;
+    color: #2d3748;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, #4a6cf7, #3b52c1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+    color: #4a5568;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .developer-section {
+    margin: 3rem 0;
+  }
+  
+  .developer-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .developer-avatar {
+    width: 120px;
+    height: 120px;
+    background: #4a6cf7;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .avatar-icon {
+    color: white;
+    width: 60px;
+    height: 60px;
+  }
+  
+  .developer-bio {
+    color: #4a5568;
+    line-height: 1.6;
+    margin: 1.5rem 0;
+  }
+  
+  .skills-grid {
+    display: grid;
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+  
+  .skill-item {
+    padding: 1.5rem;
+    background: #f8fafc;
+    border-radius: 0.75rem;
+    text-align: left;
+  }
+  
+  .skill-icon {
+    color: #4a6cf7;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .social-icon {
+    width: 32px;
+    height: 32px;
+    color: #4a5568;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    color: #4a6cf7;
+  }
+  
+  .mission-section {
+    margin: 3rem 0;
+  }
+  
+  .mission-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .mission-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+  
+  .value-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  .value-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  @media (max-width: 768px) {
+    .mission-content,
+    .values-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .about-hero {
+      padding: 2rem 1rem;
+    }
+  
+    .about-hero h1 {
+      font-size: 2rem;
+    }
+  
+    .developer-card {
+      padding: 1.5rem;
+    }
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .about-container {
+    animation: fadeIn 0.4s ease-out;
+  }
