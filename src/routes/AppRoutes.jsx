@@ -1,4 +1,4 @@
-import { Routes, Route, Navigate } from 'react-router-dom';
+import {BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import TextHumanizer from '../components/TextHumanizer';
 import Contact from "../components/Contact";
 
@@ -9,6 +9,8 @@ import TermsOfService from '../components/TermsOfService';
 
 const AppRoutes = () => {
   return (
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
+
     <Routes>
 
       {/* <Route path="/" element={<App />} /> */}
@@ -20,6 +22,8 @@ const AppRoutes = () => {
       <Route path="/terms" element={<TermsOfService />} />
       {/*<Route path="*" element={<Navigate to="/" replace/>} /> */}
     </Routes>
+    </BrowserRouter>
+
   );
 };
 
