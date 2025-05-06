@@ -14,7 +14,6 @@ const Contact = () => {
         exit={{ opacity: 0 }}
         className="contact-page"
       >
-        {/* Add your contact page content here */}
         <h1>Contact Us</h1>
         <div className="contact-info">
           <div className="info-item">

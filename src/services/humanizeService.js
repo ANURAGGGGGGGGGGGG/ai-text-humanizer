@@ -4,7 +4,6 @@ export async function humanizeText(text, level = 'medium') {
       try {
         throw new Error('Using fallback method');
       } catch (error) {
-        // Fallback to local implementation
         return localHumanize(text, level);
       }
     } catch (err) {
