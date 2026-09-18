@@ -21,7 +21,6 @@
 .humanizer-header {
   text-align: center;
   margin-bottom: 3rem;
-  animation: float 3s ease-in-out infinite;
 }
 
 .humanizer-header h2 {
@@ -100,6 +99,11 @@
   box-shadow: 0 0 0 2px var(--primary);
 }
 
+.text-input:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
 .controls-container {
   display: grid;
   gap: 1.5rem;
@@ -136,17 +140,24 @@
   background: white;
   border: 2px solid #e2e8f0;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .level-card:hover {
   transform: translateY(-2px);
   border-color: var(--primary);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.15);
+}
+
+.level-card:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
 }
 
 .level-card.active {
   border-color: var(--primary);
   background: #f0f4ff;
+  box-shadow: 0 0 0 1px var(--primary);
 }
 
 .level-label {
@@ -172,7 +183,7 @@
   align-items: center;
   gap: 0.75rem;
   justify-content: center;
-  transition: all 0.2s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
 }
 
@@ -180,6 +191,16 @@
   background: var(--primary-hover);
   transform: translateY(-1px);
   box-shadow: 0 5px 15px rgba(99, 102, 241, 0.3);
+}
+
+.primary-button:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.primary-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.2);
 }
 
 .spinner {
@@ -249,12 +270,21 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  transition: all 0.2s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .copy-button:hover {
   background: var(--primary-hover);
   transform: translateY(-1px);
+}
+
+.copy-button:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.copy-button:active {
+  transform: translateY(0);
 }
 
 .about-section {
@@ -277,12 +307,12 @@
   border-radius: 1rem;
   text-align: center;
   border: 1px solid #e2e8f0;
-  transition: all 0.2s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .about-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06);
 }
 
 .card-icon {
@@ -342,5 +372,23 @@
 
   50% {
     transform: translateY(-5px);
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .level-card:hover,
+  .primary-button:hover,
+  .copy-button:hover,
+  .about-card:hover {
+    transform: none;
   }
 }

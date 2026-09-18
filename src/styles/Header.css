@@ -57,7 +57,12 @@
 
 .nav-link:hover {
   background: rgba(255, 255, 255, 0.1);
-  transform: translateY(-2px);
+  transform: translateY(-1px);
+}
+
+.nav-link:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 2px;
 }
 
 .nav-link::after {
@@ -82,6 +87,12 @@
   border: none;
   cursor: pointer;
   padding: 0.5rem;
+}
+
+.hamburger:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
 .bar {
@@ -126,15 +137,15 @@
   }
 
   /* Hamburger Animation */
-  .bar1.active {
+  .bar.bar1 {
       transform: rotate(-45deg) translate(-5px, 6px);
   }
 
-  .bar2.active {
+  .bar.bar2 {
       opacity: 0;
   }
 
-  .bar3.active {
+  .bar.bar3 {
       transform: rotate(45deg) translate(-5px, -6px);
   }
 }
@@ -144,5 +155,17 @@
   .header-logo:hover {
       transform: scale(1.05);
       text-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-link,
+  .header-logo {
+      transition: none;
+  }
+
+  .nav-link:hover,
+  .header-logo:hover {
+      transform: none;
   }
 }
